@@ -3,20 +3,20 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const clientId = '862811879315-ur20fqc030th5oure5vsmkdg8ll94o8r.apps.googleusercontent.com';
 
-const refreshTokenSetup = (res) => {
-  let refreshTiming = (res.tokenObj.expires_in || 3600 - 5 * 60) * 1000;
+// const refreshTokenSetup = (res) => {
+//   let refreshTiming = (res.tokenObj.expires_in || 3600 - 5 * 60) * 1000;
 
-  const refreshToken = () => {
-    res.reloadAuthResponse()
-      .then(newAuthRes => {
-        refreshTiming = (newAuthRes.expires_in || 3600 - 5 * 60) * 1000;
-        console.log('newAuthRes:', newAuthRes);
-        console.log('new auth Token', newAuthRes.id_token);
-        setTimeout(refreshToken, refreshTiming);
-      })
-  }
-  setTimeout(refreshToken, refreshTiming);
-}
+//   const refreshToken = () => {
+//     res.reloadAuthResponse()
+//       .then(newAuthRes => {
+//         refreshTiming = (newAuthRes.expires_in || 3600 - 5 * 60) * 1000;
+//         console.log('newAuthRes:', newAuthRes);
+//         console.log('new auth Token', newAuthRes.id_token);
+//         setTimeout(refreshToken, refreshTiming);
+//       })
+//   }
+//   setTimeout(refreshToken, refreshTiming);
+// }
 
 const Login = () => {
 
