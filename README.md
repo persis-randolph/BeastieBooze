@@ -8,6 +8,17 @@ Webpack:
  3) The command to run webpack is <npm run build:dev>. This command must be run throughout dev to contiguously package
     any changes that will render on the client side.
 
+# Deployment
+
+AWS EC2 instance using Ubuntu 20.04 and pm2 for deployment assistance
+1) After a PR is made and the files you are looking at are fully pushed and up to date with the main, run <npm run-script deploy> to deploy to the AWS EC2 instance.
+2) SSH into the instance with the command <ssh -i ~/.ssh/your-key-name-here.pem your-username@your-url-here.com> formatted with your instance url, username, and pem key (provided by AWS)
+3) Run <npm run build:prod> on the instance to update the webpack/bundle.js
+
+# Database
+
+
+
 # Client-Side
 
 React Components:
